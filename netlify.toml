@@ -1,15 +1,5 @@
 [build]
-  functions = "netlify/functions"
-  publish = "public"
+  functions = "functions"
 
-[[redirects]]
-  from = "/api/invoices"
-  to = "/.netlify/functions/saveInvoice"
-  status = 200
-  method = "POST"
-
-[[redirects]]
-  from = "/api/invoices/:id"
-  to = "/.netlify/functions/getInvoice"
-  status = 200
-  method = "GET"
+[dev]
+  publish = "dist"
