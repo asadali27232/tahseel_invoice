@@ -1,0 +1,308 @@
+/* Reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container for the content layout */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+/* Styling for form-container */
+.form-container {
+    width: 30%; /* Takes 50% on larger screens */
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.form-container h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(15, 15, 134);
+    text-align: center;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin: 8px 0 5px;
+    font-size: 14px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(15, 15, 134);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #0a0a87;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+    .form-container,
+    .invoice-container {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+/* Container for the entire invoice */
+.invoice-container {
+    max-width: 800px; /* Limit the width for readability */
+    margin: 0 auto;
+    padding-top: 20px; /* Space from the top of the page */
+    text-align: center; /* Center-aligns the contents */
+}
+
+/* Barcode specific styling */
+.barcode-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.barcode {
+    width: 290px; /* Set a fixed width for the barcode */
+    height: 100px; /* Maintain aspect ratio */
+    margin-top: 10px; /* Space between top and barcode */
+}
+
+/* Logo Row Styling */
+.logo-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 90px;
+    margin-top: -35px;
+}
+
+.logo {
+    width: 220px; /* Adjust width as needed */
+    height: auto;
+}
+/* Arabic Text Row Styling */
+.text-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-top: 20px;
+}
+
+.text-left,
+.text-right {
+    text-align: center;
+    font-size: 14px; /* Adjust font size as needed */
+    line-height: 1.5; /* Space between lines */
+    width: 65%;
+    color: rgb(15, 15, 134);
+    /* font-weight: bold; */
+}
+
+/* Align Arabic text to right for right-to-left alignment */
+.text-left p,
+.text-right p {
+    direction: rtl;
+    margin: 0; /* Remove default margin to control spacing */
+}
+
+.new-text-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text horizontally */
+    margin-top: 30px; /* Space above the new text */
+}
+.new-text-row .number-text {
+    color: #000000;
+}
+.new-text-row p {
+    margin: 2px 0; /* Spacing between lines */
+    font-size: 14px; /* Adjust font size as needed */
+    color: rgb(15, 15, 134);
+    text-align: center; /* Center the text */
+    font-weight: bold;
+}
+
+.dashed-line {
+    border-top: 2px dashed #000; /* Adjust thickness and color as needed */
+    margin: 25px 0; /* Space above and below the line */
+    width: 50%; /* Full width of the container */
+    /* Center the line */
+    display: inline-block;
+}
+.time-date-row {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+    margin: -5px auto; /* Margin for spacing */
+    max-width: 550px; /* Set a max width for the row */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.time-left {
+    display: flex; /* Use flexbox for time alignment */
+    align-items: center; /* Center vertically */
+}
+
+.time-left span {
+    margin-right: 45px; /* Space between label and value */
+}
+
+.date-left {
+    display: flex; /* Use flexbox for date alignment */
+    align-items: center; /* Center vertically */
+    margin-left: 140px; /* Adjust this value for more space on the left */
+}
+
+.date-left span {
+    margin-right: 30px; /* Space between label and value */
+}
+
+.time-arabic {
+    text-align: right; /* Right align the Arabic text */
+}
+
+.form-rows {
+    margin: 40px auto; /* Center the rows */
+    max-width: 550px; /* Set a max width for the rows */
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    font-size: 13px;
+    font-weight: bold;
+}
+.form-rows .right-column {
+    color: rgb(15, 15, 134);
+}
+
+.row {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between columns */
+    align-items: center; /* Center vertically */
+    margin: 2px 0; /* Space between rows */
+}
+
+.left-column {
+    flex: 1; /* Equal space for left column */
+    text-align: left; /* Align text to the left */
+}
+
+.middle-column {
+    flex: 1; /* Equal space for middle column */
+    text-align: center; /* Center text */
+}
+.servicemiddle {
+    color: rgb(15, 15, 134);
+}
+
+.right-column {
+    flex: 1; /* Equal space for right column */
+    text-align: right; /* Align text to the right */
+}
+.qr-code-container {
+    position: relative;
+    text-align: center; /* Center align contents */
+    margin-top: -25px; /* Adjust spacing as needed */
+}
+
+.qr-code {
+    width: 180px; /* Set a fixed width for the QR code */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the QR code */
+}
+.qr-text {
+    position: absolute;
+    bottom: 10px; /* Position it above the bottom of the image */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Align texts left and right */
+    padding: 0; /* Add padding if needed */
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.date-time {
+    text-align: left; /* Align text to the left */
+    margin-left: 26px;
+}
+
+.english-text {
+    text-align: right; /* Align text to the right */
+    margin-right: 70px;
+}
+
+.bullet-points-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Space above the bullet points */
+    font-size: 11px;
+    width: 700px;
+    padding: 0 30px;
+    align-items: center;
+    text-align: center;
+    color: rgb(15, 15, 134);
+    font-weight: bold;
+}
+
+.bullets {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.bullets li {
+    margin-bottom: 20px; /* Space between bullet points */
+    padding-right: 40px;
+}
+
+.bullet-item {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.english {
+    text-align: left; /* Align English text to the left */
+    margin-right: 80px; /* Space to the Arabic text */
+    flex: 1; /* Allow it to grow */
+    line-height: 1.5;
+    margin-left: 10px;
+}
+
+.arabic {
+    text-align: right; /* Align Arabic text to the right */
+    flex: 1; /* Allow it to grow */
+    padding: 0;
+    margin-right: 10px;
+}
+
+.tahseelgov {
+    margin-left: 210px;
+    overflow: hidden;
+    margin-top: -30px;
+}
+#invoiceTime {
+    width: 68px;
+}

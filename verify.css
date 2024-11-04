@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding-bottom: 20px;
+    /* padding-top: 20px; */
+}
+
+header {
+    position: relative;
+    background: url('https://tahseel.gov.ae/CustomerPortal/assets/images/saas2/slider.jpg')
+        no-repeat center center/cover;
+    height: 490px;
+    clip-path: ellipse(70% 70% at 50% 0%);
+    margin-bottom: -120px;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    height: 80%;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-top: 20px;
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 100px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 100px;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+.page-title {
+    text-align: left;
+    margin-top: 80px;
+    margin-left: 180px;
+}
+
+.page-title h1 {
+    /* font-size: 24px; */
+    margin-left: -50px;
+    margin-bottom: 10px;
+    font-size: calc(17.22222px + 0.92593vw);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.page-title p {
+    margin-left: -50px;
+    font-size: 14px;
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .mobile-menu ul li {
+        padding: 10px 0;
+    }
+
+    .mobile-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
+
+.center-box {
+    background-color: #fff;
+    padding-top: -70px;
+
+    padding: 30px; /* Padding for internal spacing */
+    width: 90%; /* Full width with padding on smaller screens */
+    /* Centers horizontally */
+    /* border-radius: 10px; */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 30px;
+    /* font-size: 24px; */
+    color: #262c4f;
+    font-family: Poppins, sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    /* font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
+    text-align: left; */
+    text-align: left;
+}
+
+.orange-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+}
+.orange-lines p {
+    font-weight: 500;
+    font-size: 1rem !important;
+    color: #ff923f !important;
+    margin-bottom: 8px;
+}
+
+.fields-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.field {
+    width: calc(50% - 10px);
+    font-size: 16px;
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.1rem !important;
+    color: #1e1e2d !important;
+}
+
+.field strong {
+    /* color: #555; */
+    font-size: 1.1rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.1rem !important;
+    color: #b5b5c3 !important;
+}
+
+.grey-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #525659;
+    width: 100%;
+    height: 700px;
+}
+
+.download-btn {
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #6993ff;
+    border-color: #6993ff;
+    letter-spacing: normal;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: 600 !important;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 500px) {
+    .field {
+        width: 100%;
+    }
+
+    .download-btn {
+        font-size: 14px;
+    }
+}
+.sticky-icons {
+    position: fixed;
+    top: 50%;
+    right: -10px; /* Distance from the right edge of the screen */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between the icons */
+    z-index: 1000; /* Ensure it appears on top */
+}
+
+.sticky-icons .icon {
+    width: 50px;
+    height: 50px;
+    background-color: #d3d3d3; /* Adjust color as needed */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    transition: background-color 0.3s;
+}
+
+.sticky-icons .icon:hover {
+    background-color: #b0b0b0; /* Change color on hover */
+}
+
+.sticky-icons .icon img {
+    width: 60%; /* Adjust to fit icon within the circle */
+    height: 60%;
+}
+
+#head {
+    height: 60px;
+    color: #fff;
+    background-color: #323639;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 12px;
+    border-bottom: 4px solid #525659;
+}
+
+#head h3 {
+    margin-left: 80px;
+}
+
+#left-right {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-bottom: 2px solid #525659;
+}
+
+#left {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    align-items: start;
+    background-color: #323639;
+    border-right: 4px solid #525659;
+}
+
+#left img {
+    margin-top: 10%;
+    width: 60%;
+}
+
+#right {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+    background-color: #323639;
+}
+
+.download-btn {
+    margin-top: 18px;
+}
+
+i {
+    margin-left: 10px;
+}
